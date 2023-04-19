@@ -1,0 +1,20 @@
+databases:
+  - name: chatapp
+    plan: free
+    databaseName: chatapp
+    user: chatapp
+
+services:
+  - type: web
+    name: chatapp
+    plan: free
+    env: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: chatapp
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
