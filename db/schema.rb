@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_04_17_152027) do
+ActiveRecord::Schema.define(version: 2023_04_20_161620) do
 
   create_table "messages", force: :cascade do |t|
     t.integer "user_id"
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2023_04_17_152027) do
   create_table "users", force: :cascade do |t|
     t.string "email"
     t.string "password_digest"
-    t.integer "phone_number"
+    t.string "phone_number"
     t.string "name"
     t.integer "role_id"
     t.datetime "created_at", precision: 6, null: false

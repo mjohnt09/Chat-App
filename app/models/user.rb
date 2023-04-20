@@ -6,7 +6,7 @@
 #  email           :string
 #  name            :string
 #  password_digest :string
-#  phone_number    :integer
+#  phone_number    :string
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #  role_id         :integer
